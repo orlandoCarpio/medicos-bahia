@@ -112,5 +112,10 @@ class TurnController extends Controller
         $dia=date('w',strtotime($fecha));
         $horario=Doctor::find($id)->office->schedules->firstWhere('dia',$dia);
         return view('medico.listadoTurnos',['datos'=>$datos,'turnos'=>$turnos->toArray(),'horario'=>$horario,'fecha'=>$fecha]);            
+        //return response()->json(['id'=>$id,'datos'=>$datos,'turnos'=>$turnos->toArray(),'horario'=>$horario,'fecha'=>$fecha]);            
+    }
+    public function updateTurn($id){
+        Turn::find($id).update(['estado'=>'atendido']);
+        return;
     }
 }

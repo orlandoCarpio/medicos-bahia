@@ -16,6 +16,6 @@ $(document).ready(function(){
     $("#horarios-cont-grid").on('change','#fecha-t',App.FunctionsData.getTurnos);
     $("#horario-grid").on('click','.cancelar-turno',App.FunctionsData.deleteTurnos);
     $("#horario-grid").on('click','.libre',App.FunctionsData.reserveTrun);
-    
+    $("#horarios-m").on('click','.atendido',App.FunctionsData.turnoAtendido);
 
 });

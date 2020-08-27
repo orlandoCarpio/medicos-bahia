@@ -43,6 +43,7 @@ Route::get('/solicitar-turno/{id}','TurnController@index');
 Route::get('/turno-horarios/{id}/{fecha}/{dias}','TurnController@getSchedules');
 Route::get('/borrar-turno/{id}','TurnController@deleteTurn');
 Route::post('/reserve-turn','TurnController@reserveTurn');
+Route::get('/update-turn/{id}','TurnController@updateTurn');
 //medico
 Route::view('/panel-medico','panelMedico');
 Route::get('/turnos-medico/{fecha}','TurnController@getTurnoMedico');

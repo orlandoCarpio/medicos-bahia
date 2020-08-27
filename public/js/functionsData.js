@@ -196,7 +196,13 @@ App.FunctionsData = {
         $.get('turnos-medico/'+fecha,function(data){
             $('#medico-contenedor').append(data);
         });
-    }
+    },
+    turnoAtendido:function(){
+        var id=$(this).data(id);
+        $.get('update-turn/'+id,function(){
+            App.FunctionsData.getTurnosMedicos();
+        });
+    },
     
     
 
