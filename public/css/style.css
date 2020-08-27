@@ -1,0 +1,485 @@
+#crear-cuenta-btn{
+    margin-right:10px;
+}
+#general-container{
+    background-image: url('../image/medicos.jpg');
+    height: 91.8vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#formulario-busqueda{
+    width: 64%;
+    font-weight: 600!important;
+    background-color: #183b7963;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    display: block;
+    position: absolute;
+    margin-left: 17%;
+    top: 45%;
+}
+#checkbox-center{
+    color: azure;
+}
+.checkbox-container{
+    margin-bottom: 20px;
+    display: flex;
+    font-size: 26px;
+    line-height: 0.8!important;
+}
+#div-search-btn{
+    float: right;
+    margin-right: 8.7%;
+}
+#busqueda-nombre .col-sm-10,#busqueda-especialidad .col-sm-10,#fecha-t,#checkbox-center,#horario-grid .col{
+    margin: auto;
+}
+#detail-speciality{
+    width: 83%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#busqueda-especialidad,#ancla-medicos,#create-new-bill-div,#login-div{
+    display: none;
+}
+
+#container-create-bill{
+    width: 60%;
+    margin: auto;
+    background-color: #183b7954;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-radius: 14px;
+    border-bottom-style: outset;
+}
+#container-create-bill .col-sm-10{
+    margin: auto;
+}
+#titulo-pagina{
+    text-align: center;
+    margin: 20px 0px;
+}
+.error-bill{
+    display: none;
+}
+.error-bill{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    padding: 2px;
+}
+#cancel-btn{
+    margin-right: 7.3%;
+}
+.fom-cont{
+    margin:auto;
+}
+.mostrar{
+    display: block!important;
+}
+.error-mensaje,.message-error-login{
+    display: none;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding-left: 14px;
+}
+.message-error-login{
+    margin-bottom: 15px;
+    padding: 10px 14px 10px 10px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+.form-group p{
+    margin-top: 15px;
+}
+.hidden-element{
+    display: none;
+}
+.div-login-name{
+    padding: 6px;
+    background-color: mintcream;
+    font-size: 1.1rem;
+}
+.div-login-name .fa{
+    margin-right: 5px
+}
+.div-login-name .fa-caret-down{
+    margin-left: 5px;
+}
+.container-login-name{
+    position: relative;
+    display: none;
+}
+.div-login-name:hover{
+    cursor: pointer;
+}
+.submenu-login{
+    position: absolute;
+    background-color: #e7f3ed;
+    width: 100%;
+    padding-left: 6px;
+    font-size: 1.1rem;
+    font-weight: 500; 
+    display:none;    
+}
+
+.submenu-login a{
+    display: block;
+    text-decoration: none;
+}
+.info-mail{
+    width:80%;
+    margin:auto;
+}
+.img-class{
+    margin: auto;
+border-radius: 65%;
+}
+.img-class img{
+    border-radius: 100%;
+max-width: 200px;
+max-height: 202px;
+overflow: hidden;
+}
+.card .card-title{
+    text-align: center;
+}
+.os-class{
+    display: flex;
+}
+.container-obras{
+    margin-left: 0px;
+    padding-left:0px;
+    position:relative;
+}
+.container-obras img{
+    top: 7px;
+    width: 16px;
+    position: absolute;
+    right: 2px;
+}
+.obras-option p,#medico-l label{
+    margin-bottom: 0px;
+}
+.container-obras:hover .obras-option{
+    display:block;
+    height: auto;
+    transition:  .5s;
+}
+.obras-option {
+    display:none;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.obras-option p:nth-child(odd){
+    background: #ddd;
+}
+.os-titulos{
+    padding: 0px;
+    max-width: 31.333333%;
+}
+.btn-datos{
+    margin-top: 10px;
+}
+.btn-datos .row{
+    float: right;
+}
+#salir-modal{
+    margin-right: 10px;
+}
+.cont-turn {
+    max-width: 404px;
+    margin: auto;
+}
+p.horas-g {
+    
+    padding: 5px 15px;
+    margin-bottom: .5rem;
+    font-size: x-large;
+    font-weight: 600;
+    color: #292727;
+}
+.libre,.libref{
+    background: #5ae079;
+}
+.ocupado{
+    background:#f76161;
+}
+#horario-grid{
+    margin-top: 15px;
+}
+#horario-grid h3{
+    text-align: center;
+}
+.cancelar-turno{
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cancelar-turno:hover{
+    background: #007bff;
+    color: #2d2b2b;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+#horario-grid .col{
+    margin-top: 5px;
+}
+span.turno-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+#datos-medico,#tabla-medicos{
+    font-size: 17px;
+    font-weight: 500;
+}
+#datos-medico p{
+    margin-bottom:7px ;
+}
+#date-grid,#container-turno{
+    padding-top: 20px;
+}
+.libre:hover{
+    cursor: pointer;
+    background: #58cc73;
+}
+.libref:hover{
+    cursor: not-allowed;
+    background: #58cc73;
+}
+.error-turno{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    background: #f37878d1;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 500;
+}
+#horario-grid .alert{
+    width: 97.5%;
+    text-align: center;
+    margin: auto;
+}
+.error-log, .exito-turno{
+    margin-top: 16px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+#tabla-medicos img{
+    height: 100%;
+    max-height: 129px;
+    width: 100%;
+}
+#tabla-medicos .foto{
+    max-width: 100%;
+    margin: auto;
+}
+#tabla-medicos{
+    margin-top: 15px
+}
+#tabla-medicos .foto-d{
+    max-width: 150px;
+}
+
+#tabla-medicos .row{
+    margin-top:10px;    
+    border: 1px solid #808080d6;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f1f1f1;
+}
+#tabla-medicos .row:nth-child(odd){
+    background: #0000ff14;
+    border: 1px solid cornflowerblue;
+}
+#tabla-medicos .row{
+    border-top-style: none !important;
+    border-bottom-style: none !important;
+}
+.botones-m p{
+    text-align: center;
+}
+.botones-m .btn{
+    width: 80%;
+}
+.botones-m p:first-child{
+    margin-top: 20px;
+}
+.cont-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+}
+.cont-e{
+    display: block;
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    padding: 35px;
+    background: lightsteelblue;
+    border: 1px solid #7171e0;
+    border-radius: 5px;
+}
+#cont-rec-pass h2{
+    padding-top: 15px;
+    text-align: center;
+}
+#enviar-email,#enviar-pass{
+    float:right;
+}
+
+/*nuevo modelo*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+   
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+   
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #504e4ead;
+    -webkit-transition: .4s;
+    transition: .4s;
+    color: #616467c9;
+    font-size: 14px;
+    font-weight: 700;
+   
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+     content:'No';
+      line-height:1.8;
+  text-align:center;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content:'Si';
+    line-height:1.8;
+  text-align:center;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 7px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*menu medico*/
+aside{
+    max-width: 250px;
+    background: #007bff;
+    height: calc(100vh);
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    position: fixed;
+}
+aside > ul{
+    padding-left: 0px;
+}
+aside li:hover a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    transition: .5s;
+    font-size: 22px
+}
+aside a {
+    color: white;
+    padding-left: 15px;
+    text-decoration: none;
+}
+aside li {
+    list-style: none;
+    padding: 15px 2px;
+}
+aside li:hover{
+    background: #626467d9;
+}
+aside h2{
+    margin-top: 70px;
+    margin-bottom: 26px;
+    text-align: center;
+    padding: 12px;
+}
+.sub-menu{
+    height: 0px;
+    overflow: hidden;
+}
+.sub-menu ul{
+    padding-left: 10px;
+}
+
+li.menu-m:hover .sub-menu {
+    height: 120px;
+    transition:1s;
+    
+}
+.icono-m{
+    float: right;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+#cont-medico{
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0px;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+#medico-contenedor{
+    margin-top: 54px;
+}
