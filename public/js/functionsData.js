@@ -12,8 +12,9 @@ App.FunctionsData = {
             dataType:'json',
             success: function(response){
                 if(response.respuesta){
-                    if(response.tipo)
-                        location.replace("http://127.0.0.1:8000/panel-medico");
+                    if(response.tipo != 'paciente')
+                        //console.log();
+                        location.replace("http://127.0.0.1:8000/panel-medico/3");
                     $("#modalGlobal").modal('toggle');
                     $("#reset-form-button").click();
                     $("#name-login").append(response.datos[0].email);
@@ -175,7 +176,7 @@ App.FunctionsData = {
     reserveTrun:function(){
         var datos={};
         datos.hora=$(this).data('h');
-        datos.fecha=$('#fecha-t').val();
+        datos.fecha=$('#fecha-me').val();
         datos.idDoctor=$('#idMed').val();
         $.ajax({
             url: '/reserve-turn',
@@ -187,9 +188,29 @@ App.FunctionsData = {
                 $("#mensajesl").append(data.mensaje);
                 App.FunctionsData.getTurnos();
                 setTimeout(function(){ $("#mensajesl").empty(); }, 3000);
-                //alert(data);
+                if(data.success){
+                    $('#modalPdfTourn .fullname').append(data.datos.fullname);
+                    $('#modalPdfTourn .specialty').append(data.datos.specialty);
+                    $('#modalPdfTourn .phone').append(data.datos.telefono);
+                    $('#modalPdfTourn .date').append(data.fecha);
+                    $('#modalPdfTourn .hours').append(data.hora);
+                    $('#modalPdfTourn .address').append(data.datos.direccion);
+                    $('#modalPdfTourn .floor').append(data.datos.piso);
+                    $('#modalPdfTourn .office').append(data.datos.oficina);
+                    let boton = document.querySelector('#link-download-tourn');
+                    boton.href = "/turnopdf/"+datos.idDoctor+"/"+datos.fecha+"/"+datos.hora;
+                    // boton.dataset.id = data.iddoctor;
+                    // boton.dataset.fecha = data.fecha;
+                    // boton.dataset.hora = data.hora;
+                    $('#modalPdfTourn').modal('show');
+                    //window.location.href="/turnopdf/"+datos.idDoctor+"/"+datos.fecha+"/"+datos.hora;
+                }    
             }
         });
+    },
+    downloadTurn: function(){
+        let boton = document.querySelector('#download-tourn');
+        window.location.href="/turnopdf/"+boton.dataset.id+"/"+boton.dataset.fecha+"/"+boton.dataset.hora;
     },
     getTurnosMedicos:function(){
         var fecha=$('#fecha-me').val();
@@ -198,11 +219,12 @@ App.FunctionsData = {
         });
     },
     turnoAtendido:function(){
-        var id=$(this).data(id);
-        $.get('update-turn/'+id,function(){
+        var id=$(this).data('id');
+        $.get('update-turn/'+id,function(d){
+            //alert(d);
             App.FunctionsData.getTurnosMedicos();
         });
-    },
+    }, 
     
     
 

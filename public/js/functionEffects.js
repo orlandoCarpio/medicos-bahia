@@ -11,7 +11,7 @@ App.FunctionEffects = {
     },
     showLoginModal:function(){
         $("#content-modal").find('.container').remove();
-        jQuery.noConflict();
+        //jQuery.noConflict();
         $("#modalGlobal").modal('toggle');
         $("#title-modal").text('Login');
         console.log($("#title-modal"));

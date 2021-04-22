@@ -25,10 +25,10 @@ $clase=(!empty($hora_user) && $hora_user[0]!="")?'libref':'libre';
                         @endif                
                     </p>    
                 @else    
-                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{$h}}</p>
+                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{date('H:i',strtotime($h))}}</p>
                 @endif
             @else
-                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{$h}}</p>
+                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{date('H:i',strtotime($h))}}</p>
             @endif 
         @endfor 
     </div>
@@ -52,11 +52,37 @@ $clase=(!empty($hora_user) && $hora_user[0]!="")?'libref':'libre';
                         @endif                
                     </p>    
                 @else    
-                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{$h}}</p>
+                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{date('H:i',strtotime($h))}}</p>
                 @endif
             @else
-                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{$h}}</p>
+                    <p class="horas-g {{$clase}}" data-h="{{$h}}">{{date('H:i',strtotime($h))}}</p>
             @endif
         @endfor 
     </div>
 @endif
+<div class="modal fade" id="modalPdfTourn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Turno médico</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><b>Médico: </b><span class="fullname"></span></p>
+        <p><b>Especialista: </b><span class="specialty"></span></p>
+        <p><b>Teléfono: </b><span class="phone"></span></p>
+        <p><b>Fecha: </b><span class="date"></span></p>
+        <p><b>Hora: </b><span class="hours"></span></p>
+        <p><b>Dirección: </b><span class="address"></span></p>
+        <p><b>Piso: </b><span class="floor"></span></p>
+        <p><b>Oficina: </b><span class="office"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <a id="link-download-tourn" href="#"><button type="button" class="btn btn-primary" id="download-tourn">Descargar tuno en pdf</button></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -44,6 +44,16 @@ Route::get('/turno-horarios/{id}/{fecha}/{dias}','TurnController@getSchedules');
 Route::get('/borrar-turno/{id}','TurnController@deleteTurn');
 Route::post('/reserve-turn','TurnController@reserveTurn');
 Route::get('/update-turn/{id}','TurnController@updateTurn');
-//medico
-Route::view('/panel-medico','panelMedico');
+//medico 
+//Route::view('/panel-medico','panelMedico');
+Route::get('/panel-medico/{id}', function($id){
+
+    return view('panelMedico',['id' => $id]);
+});
 Route::get('/turnos-medico/{fecha}','TurnController@getTurnoMedico');
+Route::get('/turnopdf/{id}/{fecha}/{hora}', 'TurnController@turnPdf');
+// Route::get('/turnopdf', function () {
+//     $pdf = PDF::loadView('turnopdf');
+//   return $pdf->download('pruebapdf.pdf');
+//     //return view('turnopdf');
+// });

@@ -40,9 +40,9 @@ class LoginController extends Controller
             $id=$tipo=='medico'?$consulta[0]->person->doctor->id:$consulta[0]->person->user->id;
                 //$users=$consulta[0]->person->user;
             if (!$request->session()->has('id')) {
-                $request->session()->put('id',$id );
+                $request->session()->put('id',$id );                
+                $request->session()->put('tipo',$tipo );                
             }
-            
             return json_encode(['respuesta'=>true,'datos'=>$consulta,'tipo'=>$tipo]);    
         }else
             return json_encode(['respuesta'=>false,'datos'=>$consulta]);    
